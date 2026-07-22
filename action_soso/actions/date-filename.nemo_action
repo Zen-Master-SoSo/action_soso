@@ -1,0 +1,8 @@
+[Nemo Action]
+
+Name=Append date to filename
+Comment=Rename file(s) with today's date appended
+Exec=date-filename %F
+Selection=notnone
+Terminal=false
+Extensions=any;

@@ -1,0 +1,9 @@
+[Nemo Action]
+
+Name=Convert to .eml
+Comment=Convert from Outlook message to .eml
+Exec=msgconvert %F
+Selection=notnone
+Extensions=msg;
+Terminal=false
+Dependencies=msgconvert

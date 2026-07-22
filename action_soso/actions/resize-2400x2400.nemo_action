@@ -1,0 +1,10 @@
+[Nemo Action]
+
+Name=Resize to 2400px max
+Comment=Resize selected image(s) so that its height and width do not exceed 2400 pixels.
+Icon-Name=image-x-generic
+Exec=mogrify -resize 2400x2400 %F
+Selection=notnone
+Mimetypes=image/*;
+Terminal=false
+Dependencies=mogrify

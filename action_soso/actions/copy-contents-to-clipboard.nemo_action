@@ -1,0 +1,10 @@
+[Nemo Action]
+
+Name=Copy Content to clipboard
+Comment=Copy the content of the selected text file to the clipboard
+Exec=copy-content %F
+Selection=s
+Mimetypes=text/*;
+Terminal=false
+Dependencies=xclip
+Icon-Name=edit-copy

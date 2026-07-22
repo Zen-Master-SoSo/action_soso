@@ -1,0 +1,10 @@
+[Nemo Action]
+
+Name=Resize to 640px max
+Comment=Resize selected image(s) so that its height and width do not exceed 640 pixels.
+Icon-Name=image-x-generic
+Exec=mogrify -resize 640x640 %F
+Selection=notnone
+Mimetypes=image/*;
+Terminal=false
+Dependencies=mogrify

@@ -1,0 +1,8 @@
+[Nemo Action]
+
+Name=Number files (prefix)
+Comment=Renames the selected files, or the contents of the selected folder(s), with sequential numbers before the file title
+Exec=number-files -pdy %F
+Selection=notnone
+Terminal=false
+Extensions=any;

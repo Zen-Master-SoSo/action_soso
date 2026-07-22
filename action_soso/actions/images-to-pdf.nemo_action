@@ -1,0 +1,9 @@
+[Nemo Action]
+
+Name=Images to PDF
+Comment=Combine all the selected images into a PDF
+Exec=convert %F combined.pdf
+Selection=m
+Mimetypes=image/*;
+Terminal=false
+Dependencies=convert

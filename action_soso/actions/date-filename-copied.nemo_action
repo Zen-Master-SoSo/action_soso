@@ -1,0 +1,8 @@
+[Nemo Action]
+
+Name=Copy with date
+Comment=Copy file(s) with today's date and time appended
+Exec=date-filename -c %F
+Selection=notnone
+Terminal=false
+Extensions=any;
