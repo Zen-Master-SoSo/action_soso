@@ -10,7 +10,7 @@ dynamic = ["version", "description"]
 Home = "https://github.com/Zen-Master-SoSo/action_soso"
 
 [project.scripts]
-install-actions-soso = "action_soso.install_nemo_actions:main"
+action-soso = "action_soso.__main__:main"
 change-case-files = "action_soso.change_case_files:main"
 copy-content = "action_soso.copy_content:main"
 date-filename = "action_soso.date_filename:main"
