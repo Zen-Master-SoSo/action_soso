@@ -24,7 +24,7 @@ from math import ceil
 from pathlib import Path
 
 
-__version__ = "0.0.0"
+__version__ = "1.0.0"
 
 
 def path_list(options, cwd_default = True):
