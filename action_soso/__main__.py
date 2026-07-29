@@ -40,6 +40,8 @@ A bunch of handy utilities and nemo actions that utilize them.
   given as a set. If multiple directory names are given, each directory is
   treated as a separate set.
 
+To install Nemo actions:
+  $ action-soso --install
 """
 import sys
 from argparse import ArgumentParser

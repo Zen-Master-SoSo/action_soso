@@ -1,0 +1,8 @@
+[Nemo Action]
+
+Name=Upper case files
+Comment=Renames the selected files to all uppercase, spaced with dashes
+Exec=change-case-files -udy %F
+Selection=notnone
+Terminal=false
+Extensions=any;

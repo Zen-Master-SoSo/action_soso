@@ -1,0 +1,8 @@
+[Nemo Action]
+
+Name=Lower case files
+Comment=Renames the selected files to all lowercase, spaced with dashes
+Exec=change-case-files -ldy %F
+Selection=notnone
+Terminal=false
+Extensions=any;

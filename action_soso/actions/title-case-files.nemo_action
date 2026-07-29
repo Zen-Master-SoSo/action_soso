@@ -1,0 +1,8 @@
+[Nemo Action]
+
+Name=Title case files
+Comment=Renames the selected files to title case (first letter of every word is uppercase, all else lower), spaced with dashes
+Exec=change-case-files -tdy %F
+Selection=notnone
+Terminal=false
+Extensions=any;
