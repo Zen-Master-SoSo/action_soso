@@ -3,7 +3,26 @@ name = "action_soso"
 authors = [{name = "Leon Dionne", email = "ldionne@dridesign.sh.cn"}]
 readme = "README.md"
 license = {file = "LICENSE"}
-classifiers = ["License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)"]
+classifiers = [
+	"License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+	"Development Status :: 5 - Production/Stable",
+	"Environment :: X11 Applications :: Gnome",
+	"Intended Audience :: End Users/Desktop",
+	"Operating System :: POSIX",
+	"Programming Language :: Python",
+	"Programming Language :: Python :: 3",
+	"Programming Language :: Python :: 3.13",
+	"Topic :: Desktop Environment",
+	"Topic :: Desktop Environment :: File Managers",
+	"Topic :: Desktop Environment :: Gnome",
+	"Topic :: Utilities"
+]
+keywords = [
+	"nemo", "nemo actions",
+	"file manager", "file manager actions",
+	"change case", "change case files",
+	"date files", "backup", "backup files"
+]
 dynamic = ["version", "description"]
 
 [project.urls]
