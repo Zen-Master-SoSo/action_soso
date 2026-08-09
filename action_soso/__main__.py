@@ -66,12 +66,7 @@ def _main():
 		if get_user_confirmation(default_true = True):
 			actions_path.mkdir(parents = True, exist_ok = True)
 			for src_path in actions:
-				dest_path = actions_path / src_path.name
-				if dest_path.exists():
-					print(f'{dest_path} exists.')
-					if not get_user_confirmation('Overwrite'):
-						continue
-				copy2(src_path, dest_path)
+				copy2(src_path, actions_path / src_path.name)
 			print('Success!')
 			print('Quit and restart nemo to make sure the actions are available.')
 			print('(Run "nemo --quit" to make sure all instances have exited.)')

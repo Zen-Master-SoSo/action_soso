@@ -3,7 +3,7 @@
 Name=Resize to 1600px max
 Comment=Resize selected image(s) so that its height and width do not exceed 1600 pixels.
 Icon-Name=image-x-generic
-Exec=mogrify -resize 1600x1600 %F
+Exec=resize-files --size 1600 %F
 Selection=notnone
 Mimetypes=image/*;
 Terminal=false

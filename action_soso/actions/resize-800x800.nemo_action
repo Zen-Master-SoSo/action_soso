@@ -3,7 +3,7 @@
 Name=Resize to 800px max
 Comment=Resize selected image(s) so that its height and width do not exceed 800 pixels.
 Icon-Name=image-x-generic
-Exec=mogrify -resize 800x800 %F
+Exec=resize-files --size 800 %F
 Selection=notnone
 Mimetypes=image/*;
 Terminal=false

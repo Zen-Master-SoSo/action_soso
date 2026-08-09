@@ -5,5 +5,5 @@ Comment=Extract all the pages in "%f" to a set of PNG images
 Exec=pdftocairo -png %F
 Selection=s
 Mimetypes=application/pdf;
-Terminal=true
+Terminal=false
 Dependencies=pdftocairo
