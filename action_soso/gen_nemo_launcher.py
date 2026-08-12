@@ -41,8 +41,6 @@ Type=Application
 StartupNotify=false
 Categories=GNOME;GTK;Utility;Core;
 MimeType=inode/directory;application/x-gnome-saved-search;
-Actions=open-home;open-desktop;open-recent;$actions;
-
 """
 STANDARD_ENTRIES = f"""[Desktop Action open-home]
 Name=Home Folder
@@ -90,11 +88,15 @@ def main():
 		print("This script should now run every time you start up or log in.")
 		print()
 	launcher_path = HOME / '.local' / 'share' / 'applications' / 'nemo.desktop'
+	bookmarks_path = HOME  / '.config' / 'gtk-3.0' / 'bookmarks'
+	bookmarks = [ line.split(' ', 1) for line in bookmarks_path.read_text().splitlines() ]
 	with open(launcher_path, 'w') as fob:
 		fob.write(MAIN_ENTRY)
-		path = HOME  / '.config' / 'gtk-3.0' / 'bookmarks'
-		for index, parts in enumerate([ line.split(' ', 1)
-			for line in path.read_text().splitlines() ]):
+		fob.write('Actions=open-home;open-desktop;')
+		fob.write(';'.join(f'open-{index}' for index in range(len(bookmarks))))
+		fob.write(';open-recent;update-launcher;')
+		fob.write("\n\n")
+		for index, parts in enumerate(bookmarks):
 			fob.write(BOOKMARK_ENTRY.format(index, *parts))
 		fob.write(STANDARD_ENTRIES)
 	print(f'Wrote "{launcher_path}"')
