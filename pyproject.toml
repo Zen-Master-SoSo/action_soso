@@ -25,7 +25,7 @@ keywords = [
 	"resize files"
 ]
 dynamic = ["version", "description"]
-dependencies = ["zenity_judo >= 1.0.4"]
+dependencies = ["zenity_soso"]
 
 [project.urls]
 Home = "https://github.com/Zen-Master-SoSo/action_soso"

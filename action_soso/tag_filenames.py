@@ -26,7 +26,7 @@ from argparse import ArgumentParser
 from time import strftime
 from pathlib import Path
 from shutil import copy2
-from zenity_judo import Entry
+from zenity_soso import Entry
 from . import path_list
 
 DESCRIPTION_PREPEND = 'Prefix the filename with the text you enter'
