@@ -39,7 +39,7 @@ def path_list(options, cwd_default = True):
 	except AttributeError:
 		given_paths = [ Path(dirname) for dirname in options.Directory ]
 	if cwd_default and not given_paths:
-		given_paths = [ Path() ]
+		given_paths = list(Path().iterdir())
 	if options.recurse:
 		paths = []
 		for filename in given_paths:

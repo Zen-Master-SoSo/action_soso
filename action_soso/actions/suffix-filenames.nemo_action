@@ -1,0 +1,9 @@
+[Nemo Action]
+
+Name=Add to all filenames (suffix)
+Comment=Append some text to all of the selected files names.
+Exec=tag-filenames -s %F
+Selection=m
+Terminal=false
+Dependencies=zenity
+Extensions=any;

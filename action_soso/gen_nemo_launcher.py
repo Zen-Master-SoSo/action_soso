@@ -81,7 +81,9 @@ def main():
 		format="[%(filename)24s:%(lineno)3d] %(levelname)-8s %(message)s"
 	)
 	if options.autorun:
-		launcher_path = HOME / '.config' / 'autostart' / 'nemo-gen-launcher.desktop'
+		autostart_dir = HOME / '.config' / 'autostart'
+		autostart_dir.mkdir(parents = True, exist_ok = True)
+		launcher_path = autostart_dir / 'nemo-gen-launcher.desktop'
 		launcher_path.write_text(AUTORUN_LAUNCHER, encoding = 'utf-8')
 		launcher_path.chmod(0o744)
 		print(f'Wrote "{launcher_path}"')
