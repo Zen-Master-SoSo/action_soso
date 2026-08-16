@@ -80,17 +80,16 @@ def main():
 		level=logging.DEBUG,
 		format="[%(filename)24s:%(lineno)3d] %(levelname)-8s %(message)s"
 	)
-	if options.autorun:
-		autostart_dir = HOME / '.config' / 'autostart'
-		autostart_dir.mkdir(parents = True, exist_ok = True)
-		launcher_path = autostart_dir / 'nemo-gen-launcher.desktop'
-		launcher_path.write_text(AUTORUN_LAUNCHER, encoding = 'utf-8')
-		launcher_path.chmod(0o744)
-		print(f'Wrote "{launcher_path}"')
-		print("This script should now run every time you start up or log in.")
-		print()
-	launcher_path = HOME / '.local' / 'share' / 'applications' / 'nemo.desktop'
+
 	bookmarks_path = HOME  / '.config' / 'gtk-3.0' / 'bookmarks'
+	if not bookmarks_path.exists():
+		print('WARNING')
+		print(f'Bookmarks ({bookmarks_path}) not found.')
+		print('You need to bookmark something in Nemo for this script to do anything')
+		return 1
+
+	launcher_path = HOME / '.local' / 'share' / 'applications' / 'nemo.desktop'
+	launcher_path.parent.mkdir(parents = True, exist_ok = True)
 	bookmarks = [ line.split(' ', 1) for line in bookmarks_path.read_text().splitlines() ]
 	with open(launcher_path, 'w') as fob:
 		fob.write(MAIN_ENTRY)
@@ -102,6 +101,16 @@ def main():
 			fob.write(BOOKMARK_ENTRY.format(index, *parts))
 		fob.write(STANDARD_ENTRIES)
 	print(f'Wrote "{launcher_path}"')
+
+	if options.autorun:
+		autostart_dir = HOME / '.config' / 'autostart'
+		autostart_dir.mkdir(parents = True, exist_ok = True)
+		launcher_path = autostart_dir / 'nemo-gen-launcher.desktop'
+		launcher_path.parent.mkdir(parents = True, exist_ok = True)
+		launcher_path.write_text(AUTORUN_LAUNCHER, encoding = 'utf-8')
+		launcher_path.chmod(0o744)
+		print(f'Wrote "{launcher_path}"')
+		print("This script should now run every time you start up or log in.")
 
 if __name__ == "__main__":
 	sys.exit(main() or 0)
