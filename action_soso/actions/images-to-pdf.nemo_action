@@ -2,7 +2,7 @@
 
 Name=Images to PDF
 Comment=Combine all the selected images into a PDF
-Exec=convert %F combined.pdf
+Exec=images-to-pdf %F
 Selection=m
 Mimetypes=image/*;
 Terminal=false

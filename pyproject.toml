@@ -39,6 +39,8 @@ number-files = "action_soso.number_files:main"
 resize-files = "action_soso.resize_files:main"
 gen-nemo-launcher = "action_soso.gen_nemo_launcher:main"
 tag-filenames = "action_soso.tag_filenames:main"
+pdf-to-images = "action_soso.pdf_to_images:main"
+images-to-pdf = "action_soso.images_to_pdf:main"
 
 [build-system]
 requires = ["flit_core >=3.2,<4"]

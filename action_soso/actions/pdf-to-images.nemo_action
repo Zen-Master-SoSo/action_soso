@@ -2,8 +2,8 @@
 
 Name=PDF to Images
 Comment=Extract all the pages in "%f" to a set of PNG images
-Exec=pdftocairo -png %F
+Exec=pdf-to-images %F
 Selection=s
 Mimetypes=application/pdf;
 Terminal=false
-Dependencies=pdftocairo
+Dependencies=pdftocairo;zenity
