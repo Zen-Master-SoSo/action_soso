@@ -26,7 +26,7 @@ from subprocess import Popen
 from time import sleep
 
 
-__version__ = "1.5.1"
+__version__ = "1.6.0"
 
 
 def path_list(options, cwd_default = True):
